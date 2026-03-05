@@ -4,6 +4,17 @@
   "enabledManagers": ["composer"],
   "baseBranches": ["testing-renovate-bot"],
   "prHourlyLimit": 10,
+  "packageRules": [
+    {
+      "matchPackageNames": [
+        "drupal/core-recommended",
+        "drupal/core-composer-scaffold"
+      ],
+      "groupName": "Drupal core"
+    }
+  ],
+  "timezone": "Australia/Sydney",
+  "schedule": ["after 5am and before 6am every day"]
 }
 
  
