@@ -4,6 +4,15 @@
   "enabledManagers": ["composer"],
   "baseBranches": ["testing-renovate-bot"],
   "prHourlyLimit": 10,
+  "packageRules": [
+    {
+      "matchPackageNames": [
+        "drupal/core-recommended",
+        "drupal/core-composer-scaffold"
+      ],
+      "groupName": "Drupal core"
+    }
+  ]
 }
 
  
