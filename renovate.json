@@ -3,7 +3,7 @@
   "extends": ["config:recommended"],
   "enabledManagers": ["composer"],
   "baseBranches": ["testing-renovate-bot"],
-  "prHourlyLimit": 10,
+  "prHourlyLimit": 0,
   "packageRules": [
     {
       "matchPackageNames": [
@@ -13,8 +13,6 @@
       "groupName": "Drupal core"
     }
   ],
-  "timezone": "Australia/Sydney",
-  "schedule": ["after 5am and before 6am every day"]
 }
 
  
