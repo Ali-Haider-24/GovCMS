@@ -1,0 +1,4 @@
+{
+  "enabledManagers": ["composer"],
+  "baseBranches": ["testing-renovate-bot"]
+}
