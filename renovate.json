@@ -3,6 +3,7 @@
   "extends": ["config:recommended"],
   "enabledManagers": ["composer"],
   "baseBranches": ["testing-renovate-bot"]
+  "prHourlyLimit": 10,
 }
 
  
