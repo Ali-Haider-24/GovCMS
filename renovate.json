@@ -7,7 +7,7 @@
   "commitMessageAction": "Update", 
   "commitMessageTopic": "{{depName}} module", 
   "commitMessageExtra": "from {{currentVersion}} to {{newVersion}}" 
-  "labels": ["drupal11"] 
+  "labels": ["drupal11"],
   "packageRules": [
     {
       "matchPackagePatterns": ["^drupal/core"],
