@@ -6,7 +6,7 @@
   "prHourlyLimit": 0,
   "commitMessageAction": "Update", 
   "commitMessageTopic": "{{depName}} module", 
-  "commitMessageExtra": "from {{currentVersion}} to {{newVersion}}" 
+  "commitMessageExtra": "from {{currentVersion}} to {{newVersion}}",
   "labels": ["drupal11"],
   "packageRules": [
     {
