@@ -4,10 +4,19 @@
   "enabledManagers": ["composer"],
   "baseBranches": ["testing-renovate-bot"],
   "prHourlyLimit": 0,
+  "commitMessageAction": "Update", 
+  "commitMessageTopic": "{{depName}} module", 
+  "commitMessageExtra": "from {{currentVersion}} to {{newVersion}}" 
+  "labels": ["drupal11"] 
   "packageRules": [
     {
       "matchPackagePatterns": ["^drupal/core"],
       "groupName": "Drupal core"
+    },
+    {
+      "matchPackagePatterns": ["^drupal/core"],
+      "matchUpdateTypes": ["major"],
+      "enabled": false
     }
   ],
 }
