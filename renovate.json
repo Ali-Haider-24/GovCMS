@@ -6,10 +6,7 @@
   "prHourlyLimit": 0,
   "packageRules": [
     {
-      "matchPackageNames": [
-        "drupal/core-recommended",
-        "drupal/core-composer-scaffold"
-      ],
+      "matchPackagePatterns": ["^drupal/core"],
       "groupName": "Drupal core"
     }
   ],
