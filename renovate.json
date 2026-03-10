@@ -4,6 +4,7 @@
   "enabledManagers": ["composer"],
   "baseBranches": ["testing-renovate-bot"],
   "prHourlyLimit": 0,
+  "timezone": "Australia/Sydney",
   "schedule": ["* 0-5 * * *"],
   "commitMessageAction": "Update", 
   "commitMessageTopic": "{{depName}} module", 
