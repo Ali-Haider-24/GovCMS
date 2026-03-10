@@ -4,6 +4,7 @@
   "enabledManagers": ["composer"],
   "baseBranches": ["testing-renovate-bot"],
   "prHourlyLimit": 0,
+  "schedule": ["* 0-5 * * *"],
   "commitMessageAction": "Update", 
   "commitMessageTopic": "{{depName}} module", 
   "commitMessageExtra": "from {{currentVersion}} to {{newVersion}}",
@@ -18,7 +19,7 @@
       "matchUpdateTypes": ["major"],
       "enabled": false
     }
-  ],
+  ]
 }
 
  
