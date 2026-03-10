@@ -3,6 +3,8 @@
   "extends": ["config:recommended"],
   "enabledManagers": ["composer"],
   "baseBranches": ["testing-renovate-bot"],
+  "commitHourlyLimit": 0,
+  "prConcurrentLimit": 0,
   "prHourlyLimit": 0,
   "timezone": "Australia/Sydney",
   "schedule": ["* 0-5 * * *"],
