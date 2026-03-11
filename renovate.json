@@ -7,7 +7,7 @@
   "prConcurrentLimit": 0,
   "prHourlyLimit": 0,
   "timezone": "Australia/Sydney",
-  "schedule": ["* 0-5 * * *"],
+  "schedule": ["* 22-23,0-6 * * *"],
   "commitMessageAction": "Update", 
   "commitMessageTopic": "{{depName}} module", 
   "commitMessageExtra": "from {{currentVersion}} to {{newVersion}}",
