@@ -15,7 +15,7 @@
   "commitMessageTopic": "{{depName}}",
   "commitMessageExtra": "from {{currentVersion}} to {{newVersion}}",
   
-  "labels": ["drupal11"],
+  "labels": ["drupal11", "renovate"],
   
   "packageRules": [
     {
