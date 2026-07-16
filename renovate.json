@@ -16,7 +16,10 @@
   "commitMessageTopic": "{{depName}}",
   "commitMessageExtra": "from {{currentVersion}} to {{newVersion}}",
 
-  "rebaseWhen": "never",
+ "separateMajorMinor": true,
+ "separateMultipleMajor": true,
+ "separateMultipleMinor": true,
+ "separateMinorPatch": true,
   
   "labels": ["drupal11"],
   
