@@ -10,13 +10,13 @@ jobs:
     working_directory: /app
     steps:
       - run:
-        name: Clean Working Directory
-        command: find /app -mindepth 1 -delete
+          name: Clean Working Directory
+          command: find /app -mindepth 1 -delete
       - checkout
       - run:
-        name: Install GovCMS distribution
-        command: >
-          composer update --profile --prefer-dist --optimize-autoloader --no-scripts
+          name: Install GovCMS distribution
+          command: >
+            composer update --profile --prefer-dist --optimize-autoloader --no-scripts
       - checkout
       - run:
           name: Composer security audit
