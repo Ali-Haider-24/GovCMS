@@ -3,9 +3,29 @@ version: '2.1'
 orbs:
   tests: 'govcms/tests@4'
 
+jobs:
+  security-audit:
+    docker:
+      - image: govcmstesting/ci:latest-php8.3-apache
+    working_directory: /app
+    steps:
+      - run:
+        name: Clean Working Directory
+        command: find /app -mindepth 1 -delete
+      - checkout
+      - run:
+        name: Install GovCMS distribution
+        command: >
+          composer update --profile --prefer-dist --optimize-autoloader --no-scripts
+      - checkout
+      - run:
+          name: Composer security audit
+          command: composer audit --locked
+
 workflows:
   test:
     jobs:
+      - security-audit
       - tests/validate_composer
       - tests/drupal_practices
       - tests/build:
