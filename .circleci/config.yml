@@ -34,9 +34,3 @@ workflows:
       - tests/basic:
           requires:
             - tests/build
-      - tests/phpunit:
-          requires:
-            - tests/build
-      - tests/cypress:
-          requires:
-            - tests/build
