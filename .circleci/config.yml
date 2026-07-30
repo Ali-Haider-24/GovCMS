@@ -20,6 +20,15 @@ jobs:
           command: find /app -mindepth 1 -delete
       - checkout
       - run:
+          name: Check Composer security-blocking environment
+          command: |
+            if [ -n "${COMPOSER_NO_SECURITY_BLOCKING+x}" ]; then
+              printf 'COMPOSER_NO_SECURITY_BLOCKING is set to: %s\n' \
+                "$COMPOSER_NO_SECURITY_BLOCKING"
+            else
+              echo "COMPOSER_NO_SECURITY_BLOCKING is not set"
+            fi
+      - run:
           name: Install GovCMS distribution
           command: >
             composer update --profile --prefer-dist --optimize-autoloader --no-scripts
