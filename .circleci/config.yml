@@ -1,5 +1,11 @@
 version: '2.1'
 
+parameters:
+  scheduled_security_audit:
+    type: boolean
+    default: false
+
+
 orbs:
   tests: 'govcms/tests@4'
 
@@ -17,13 +23,14 @@ jobs:
           name: Install GovCMS distribution
           command: >
             composer update --profile --prefer-dist --optimize-autoloader --no-scripts --no-security-blocking
-      - checkout
       - run:
           name: Composer security audit
           command: composer audit --locked
 
 workflows:
   test:
+    when:
+      not: << pipeline.parameters.scheduled_security_audit >>
     jobs:
       - security-audit
       - tests/validate_composer
@@ -34,3 +41,8 @@ workflows:
       - tests/basic:
           requires:
             - tests/build
+
+  scheduled-security-audit:
+    when: << pipeline.parameters.scheduled_security_audit >>
+    jobs:
+      - security-audit
