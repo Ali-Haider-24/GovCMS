@@ -23,10 +23,10 @@ jobs:
       COMPOSER_NO_SECURITY_BLOCKING: 1
 
     steps:
-      - name: Check out 3.x-develop
+      - name: Check out testing-circleci
         uses: actions/checkout@v6
         with:
-          ref: 3.x-develop
+          ref: testing-circleci
 
       - name: Resolve GovCMS dependencies
         run: >
