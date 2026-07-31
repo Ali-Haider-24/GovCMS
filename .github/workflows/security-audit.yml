@@ -1,0 +1,39 @@
+name: GovCMS scheduled security audit
+
+on:
+  schedule:
+    # Every 15 minutes between 11:00 and 11:45 AEST.
+    - cron: '*/15 1 * * *'
+
+  # Allows testing from the GitHub Actions UI.
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  security-audit:
+    runs-on: ubuntu-latest
+
+    container:
+      image: govcmstesting/ci:latest-php8.3-apache
+
+    env:
+      COMPOSER_NO_SECURITY_BLOCKING: 1
+
+    steps:
+      - name: Check out testing-circleci
+        uses: actions/checkout@v6
+        with:
+          ref: testing-circleci
+
+      - name: Resolve GovCMS dependencies
+        run: >
+          composer update
+          --profile
+          --prefer-dist
+          --optimize-autoloader
+          --no-scripts
+
+      - name: Run Composer security audit
+        run: composer audit --locked
