@@ -2,8 +2,8 @@ name: GovCMS scheduled security audit
 
 on:
   schedule:
-    # Every 15 minutes between 11:00 and 11:45 AEST.
-    - cron: '*/15 1 * * *'
+    # Temporary test: every 15 minutes throughout the day.
+    - cron: '7,22,37,52 * * * *'
 
   # Allows testing from the GitHub Actions UI.
   workflow_dispatch:
