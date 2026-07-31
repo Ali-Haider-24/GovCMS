@@ -17,6 +17,7 @@ jobs:
 
     container:
       image: govcmstesting/ci:latest-php8.3-apache
+      options: --user root
 
     env:
       COMPOSER_NO_SECURITY_BLOCKING: 1
