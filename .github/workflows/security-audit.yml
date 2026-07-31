@@ -2,8 +2,17 @@ name: GovCMS scheduled security audit
 
 on:
   schedule:
-    # Temporary test: every 15 minutes throughout the day.
-    - cron: '*/5 * * * *'
+    # Every day at 6:17 am Sydney time.
+    - cron: '17 6 * * *'
+      timezone: 'Australia/Sydney'
+
+    # Every day at 7:27 am Sydney time.
+    - cron: '27 7 * * *'
+      timezone: 'Australia/Sydney'
+
+    # Every day at 8:23 am Sydney time.
+    - cron: '23 8 * * *'
+      timezone: 'Australia/Sydney'
 
   # Allows testing from the GitHub Actions UI.
   workflow_dispatch:
