@@ -33,7 +33,7 @@ jobs:
 
     steps:
       - name: Check out testing-circleci
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
         with:
           ref: testing-circleci
 
