@@ -46,7 +46,7 @@
         "drupal/ds": "3.36.0",
         "drupal/dynamic_entity_reference": "3.2.1",
         "drupal/embed": "1.10.0",
-        "drupal/encrypt": "3.2.0",
+        "drupal/encrypt": "3.3.0",
         "drupal/entity_browser": "2.15.0",
         "drupal/entity_class_formatter": "2.0.1",
         "drupal/entity_embed": "1.7.0",
