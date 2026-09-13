@@ -1,6 +1,6 @@
 services:
   ##########################################
-  # govcms: The GovCMS local development
+  # govcms: The GovCMS local development test
   ##########################################
   govcms:
     build:
